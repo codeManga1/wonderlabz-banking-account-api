@@ -8,7 +8,7 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-05-20T22:39:21+0200",
+    date = "2021-05-20T22:45:31+0200",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 11.0.3 (JetBrains s.r.o)"
 )
 public class UserEntityMapperImpl implements UserEntityMapper {
