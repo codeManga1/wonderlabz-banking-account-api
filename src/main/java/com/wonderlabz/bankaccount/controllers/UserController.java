@@ -3,10 +3,7 @@ package com.wonderlabz.bankaccount.controllers;
 import com.wonderlabz.bankaccount.domain.dto.UserEntityDto;
 import com.wonderlabz.bankaccount.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -29,5 +26,10 @@ public class UserController {
     @RequestMapping(method = RequestMethod.GET)
     public List<UserEntityDto> getAllUsers() {
         return this.userService.findAllUsers();
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/{id}")
+    public UserEntityDto getUserById(@PathVariable Long id) {
+        return this.userService.getUserByIdNumber(id);
     }
 }

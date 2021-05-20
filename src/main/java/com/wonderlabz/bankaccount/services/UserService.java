@@ -9,4 +9,6 @@ public interface UserService {
     UserEntityDto saveUser(UserEntityDto user);
 
     List<UserEntityDto> findAllUsers();
+
+    UserEntityDto getUserByIdNumber(Long idNumber);
 }
